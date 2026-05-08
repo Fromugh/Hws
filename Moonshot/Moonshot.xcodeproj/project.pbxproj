@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3C5EE2D62F84F7B800A465CB /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C5EE2D42F84F7B800A465CB /* missions.json */; };
+		3C5EE2D72F84F7B800A465CB /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C5EE2D52F84F7B800A465CB /* astronauts.json */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3CB0A29C2F73DE2800D6D3D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C5EE2D42F84F7B800A465CB /* missions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
+		3C5EE2D52F84F7B800A465CB /* astronauts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 		3CB0A28E2F73DE2700D6D3D8 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB0A29B2F73DE2800D6D3D8 /* MoonshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB0A2A52F73DE2800D6D3D8 /* MoonshotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonshotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +82,8 @@
 		3CB0A2852F73DE2700D6D3D8 = {
 			isa = PBXGroup;
 			children = (
+				3C5EE2D52F84F7B800A465CB /* astronauts.json */,
+				3C5EE2D42F84F7B800A465CB /* missions.json */,
 				3CB0A2902F73DE2700D6D3D8 /* Moonshot */,
 				3CB0A29E2F73DE2800D6D3D8 /* MoonshotTests */,
 				3CB0A2A82F73DE2800D6D3D8 /* MoonshotUITests */,
@@ -212,6 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C5EE2D62F84F7B800A465CB /* missions.json in Resources */,
+				3C5EE2D72F84F7B800A465CB /* astronauts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

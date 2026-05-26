@@ -80,7 +80,7 @@ struct ContentView: View {
                 Spacer()
                 
                 Text("Score: ???")
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(.secondary)
                     .font(.title.bold())
                 
                 Spacer()

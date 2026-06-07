@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  Moonshot
+//  Free
 //
-//  Created by H. Sungjae on 3/25/26.
+//  Created by H. Sungjae on 5/4/26.
 //
 
 import SwiftUI
@@ -21,7 +21,7 @@ struct ContentView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(missions) { mission in
                         NavigationLink {
-                            Text("Detail view")
+                            MissionView(mission: mission, astronauts: astronauts)
                         } label: {
                             VStack {
                                 Image(mission.image)
@@ -29,11 +29,6 @@ struct ContentView: View {
                                     .scaledToFit()
                                     .frame(width: 100, height: 100)
                                     .padding()
-                                    .clipShape(.rect(cornerRadius: 10))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(.lightBackground)
-                                    )
                                 
                                 VStack {
                                     Text(mission.displayName)
@@ -47,14 +42,19 @@ struct ContentView: View {
                                 .frame(maxWidth: .infinity)
                                 .background(.lightBackground)
                             }
+                            .clipShape(.rect(cornerRadius: 10))
+                            .overlay (
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.lightBackground)
+                            )
                         }
                     }
                 }
                 .padding([.horizontal, .bottom])
             }
             .navigationTitle("Moonshot")
-            .background(.darkBackground)
             .preferredColorScheme(.dark)
+            .scrollIndicators(.hidden)
         }
     }
 }

@@ -1,14 +1,14 @@
 //
-//  RpsGameApp.swift
-//  RpsGame
+//  CupcakeCornerApp.swift
+//  CupcakeCorner
 //
-//  Created by H. Sungjae on 3/8/26.
+//  Created by H. Sungjae on 6/11/26.
 //
 
 import SwiftUI
 
 @main
-struct RpsGameApp: App {
+struct CupcakeCornerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

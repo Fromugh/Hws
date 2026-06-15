@@ -18,7 +18,6 @@ struct AddView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        NavigationStack {
             Form {
                 TextField("Name", text: $name)
                 
@@ -32,14 +31,21 @@ struct AddView: View {
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Add new expense")
+            .navigationBarBackButtonHidden()
             .toolbar {
-                Button("Save") {
-                    let item = ExpenseItem(name: name, type: type, amount: amount)
-                    expenses.items.append(item)
-                    dismiss()
+                ToolbarItem {
+                    Button("Save") {
+                        let item = ExpenseItem(name: name, type: type, amount: amount)
+                        expenses.items.append(item)
+                        dismiss()
+                    }
+                }
+                ToolbarItem (placement: .cancellationAction){
+                    Button("Cancel") {
+                        dismiss()
+                    }
                 }
             }
-        }
     }
 }
 

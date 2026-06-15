@@ -51,23 +51,8 @@ class Expenses {
 }
 
 struct ContentView: View {
-    
-//    @State private var user = User()
-    
-//    @State private var showingSheet = false
-    
-//    @State private var numbers = [Int]()
-//    @State private var currentNumber = 1
-//    func removeRows(at offsets: IndexSet) {
-//        numbers.remove(atOffsets: offsets)
-//    }
-    
-//    @State private var tapCount = UserDefaults.standard.integer(forKey: "Tap")
-//    @AppStorage("tapCount") private var tapCount = 0
-    
-//    @State private var user = User(firstName: "Taylor", lastName: "Swift")
-    
     @State private var expenses = Expenses()
+    @State private var title = "iExpense"
     
     func removeItems(at offsets: IndexSet) {
         expenses.items.remove(atOffsets: offsets)
@@ -76,51 +61,6 @@ struct ContentView: View {
     @State private var showingAddExpense = false
 
     var body: some View {
-//        VStack {
-//            Text("Your name is \(user.firstName) \(user.lastName).")
-//            
-//            TextField("First name", text: $user.firstName)
-//            TextField("Last name", text: $user.lastName)
-//        }
-        
-//        Button("Show Sheet"){
-//            showingSheet.toggle()
-//        }
-//        .sheet(isPresented: $showingSheet) {
-//            SecondView(name: "@twostraws")
-//        }
-        
-//        NavigationStack {
-//            VStack {
-//                List {
-//                    ForEach(numbers, id: \.self) {
-//                        Text("Row: \($0)")
-//                    }
-//                    .onDelete(perform: removeRows)
-//                }
-//                
-//                Button("Add Number") {
-//                    numbers.append(currentNumber)
-//                    currentNumber += 1
-//                }
-//            }
-//            .toolbar {
-//                EditButton()
-//            }
-//        }
-        
-//        Button("Tap count: \(tapCount)") {
-//            tapCount += 1
-//        }
-        
-//        Button("Save User") {
-//            let encoder = JSONEncoder()
-//            
-//            if let data = try? encoder.encode(user) {
-//                UserDefaults.standard.set(data, forKey: "UserData")
-//            }
-//        }
-        
         NavigationStack {
             List {
                 ForEach(expenses.items) { item in
@@ -136,16 +76,17 @@ struct ContentView: View {
                 }
                 .onDelete(perform: removeItems)
             }
-            .navigationTitle("iExpense")
+            .navigationTitle($title)
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button("add Expense", systemImage: "plus") {
-                    showingAddExpense = true
+                NavigationLink(destination: AddView(expenses: expenses)) {
+                    Image(systemName: "plus")
                 }
             }
         }
-        .sheet(isPresented: $showingAddExpense) {
-            AddView(expenses: expenses)
-        }
+//        .sheet(isPresented: $showingAddExpense) {
+//            AddView(expenses: expenses)
+//        }
     }
 }
 

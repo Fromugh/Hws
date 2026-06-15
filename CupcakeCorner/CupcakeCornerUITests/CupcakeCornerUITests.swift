@@ -1,13 +1,13 @@
 //
-//  RpsGameUITests.swift
-//  RpsGameUITests
+//  CupcakeCornerUITests.swift
+//  CupcakeCornerUITests
 //
-//  Created by H. Sungjae on 3/8/26.
+//  Created by H. Sungjae on 6/11/26.
 //
 
 import XCTest
 
-final class RpsGameUITests: XCTestCase {
+final class CupcakeCornerUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -29,6 +29,8 @@ final class RpsGameUITests: XCTestCase {
         app.launch()
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // XCUIAutomation Documentation
+        // https://developer.apple.com/documentation/xcuiautomation
     }
 
     @MainActor

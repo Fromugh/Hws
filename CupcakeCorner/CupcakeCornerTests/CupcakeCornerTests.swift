@@ -1,14 +1,14 @@
 //
-//  RpsGameTests.swift
-//  RpsGameTests
+//  CupcakeCornerTests.swift
+//  CupcakeCornerTests
 //
-//  Created by H. Sungjae on 3/8/26.
+//  Created by H. Sungjae on 6/11/26.
 //
 
 import XCTest
-@testable import RpsGame
+@testable import CupcakeCorner
 
-final class RpsGameTests: XCTestCase {
+final class CupcakeCornerTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,6 +24,8 @@ final class RpsGameTests: XCTestCase {
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        // XCTest Documentation
+        // https://developer.apple.com/documentation/xctest
     }
 
     func testPerformanceExample() throws {

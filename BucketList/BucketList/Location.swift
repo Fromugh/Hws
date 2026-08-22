@@ -9,7 +9,7 @@ import Foundation
 import MapKit
 
 struct Location: Codable, Equatable, Identifiable {
-    let id: UUID
+    var id: UUID
     var name: String
     var description: String
     var latitude: Double
@@ -18,6 +18,7 @@ struct Location: Codable, Equatable, Identifiable {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
+    // if 전처리문
     #if DEBUG
     static let example = Location(id: UUID(), name: "Buckinham Palace", description: "Lit by over 40,000 lightbulbs.", latitude: 51.501, longitude: -0.141)
     #endif
